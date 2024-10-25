@@ -19,9 +19,24 @@
             padding: 20px;
         }
 
+        header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #333;
+            padding: 20px;
+            color: white;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
         .packages {
             display: flex;
-            justify-content: space-around;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
             margin-top: 50px;
         }
 
@@ -30,7 +45,8 @@
             border: 1px solid #ccc;
             border-radius: 10px;
             padding: 20px;
-            width: 30%;
+            width: 100%;
+            max-width: 350px;
             text-align: center;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
@@ -65,33 +81,38 @@
         .buy-btn:hover {
             background-color: #0056b3;
         }
-        header {
-            display: flex;
-            align-items: center;
-            background-color: #333;
-            padding: 20px;
+
+        @media (min-width: 600px) {
+            .package {
+                width: 48%;
+            }
+        }
+
+        @media (min-width: 900px) {
+            .package {
+                width: 30%;
+            }
         }
     </style>
 </head>
 <body>
     <header>
-  <h1 style="margin-left: 550px; color: white;">Academy</h1>
+        <h1>Academy</h1>
     </header>
-<div class="container">
-    <div class="packages">
-        <div class="package">
-            <h2>Free Python Course</h2>
-            <p>Learn Python For Free!!</p>
-            <ul>
-                <li>Course On Telegram</li>
-                <li>Python Basics</li>
-                <li>On The Company Opening!!</li>
-            </ul>
-            <div class="price">$10</div>
-            <a href="https://t.me/cyber_fun10" target="_blank" class="buy-btn">Buy</a>
+    <div class="container">
+        <div class="packages">
+            <div class="package">
+                <h2>Free Python Course</h2>
+                <p>Learn Python For Free!!</p>
+                <ul>
+                    <li>Course On Telegram</li>
+                    <li>Python Basics</li>
+                    <li>On The Company Opening!!</li>
+                </ul>
+                <div class="price">$10</div>
+                <a href="https://t.me/cyber_fun10" target="_blank" class="buy-btn">Buy</a>
+            </div>
         </div>
     </div>
-</div>
-
 </body>
 </html>
