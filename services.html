@@ -31,7 +31,9 @@
 
         .services {
             display: flex;
+            flex-wrap: wrap;
             justify-content: space-between;
+            gap: 20px;
         }
 
         .service {
@@ -39,10 +41,11 @@
             border: 1px solid #ddd;
             border-radius: 8px;
             padding: 20px;
-            margin: 10px;
-            width: 30%;
+            width: 100%;
+            max-width: 350px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             transition: transform 0.2s;
+            text-align: center;
         }
 
         .service:hover {
@@ -57,9 +60,26 @@
         p {
             color: #666;
         }
-        .h2a {
-            color: inherit;
-            text-decoration: none;
+
+        @media (min-width: 600px) {
+            .service {
+                width: 48%;
+            }
+        }
+
+        @media (min-width: 900px) {
+            .service {
+                width: 30%;
+            }
+        }
+
+        .payment-section {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .payment-section h1 {
+            margin-bottom: 10px;
         }
     </style>
 </head>
@@ -70,31 +90,26 @@
         </header>
         <section class="services">
             <div class="service">
-                <h2><a  href="hack.html">Cyber Security</a></h2>
-                <p>3 Packages/
-                    Penetration test your device, detect vulnerabilities in it, and test security</p>
+                <h2><a href="hack.html">Cyber Security</a></h2>
+                <p>3 Packages/ Penetration test your device, detect vulnerabilities in it, and test security</p>
             </div>
-          
             <div class="service">
                 <h2><a href="web.html">Make Websites</a></h2>
                 <p>We make beautiful dishes upon request, of course</p>
             </div>
             <div class="service">
                 <h2><a href="academy.html">Academy</a></h2>
-                <p>
-                    We offer free, paid and very professional educational campaigns
-                    </p>
+                <p>We offer free, paid, and very professional educational campaigns</p>
             </div>
             <div class="service">
                 <h2><a href="ai.html">AI</a></h2>
-                <p>Comming son.....</p>
+                <p>Coming soon.....</p>
             </div>
         </section>
-        <section>
-            <h1 style="margin-left: 500px;">Payments Method</h1>
-            <h2>Crypto:bitcoin,usdt,eth,ton,tron....</h2>
-            <p>
-                We accept digital currencies because they are available to all age groups + in the future we will provide payment via Visa and many other things</p>
+        <section class="payment-section">
+            <h1>Payments Method</h1>
+            <h2>Crypto: Bitcoin, USDT, ETH, TON, TRON...</h2>
+            <p>We accept digital currencies because they are available to all age groups. In the future, we will provide payment via Visa and other methods.</p>
         </section>
     </div>
 </body>
