@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,7 +25,7 @@
         /* تنسيق قسم Contact */
         #Contact {
             text-align: center;
-            padding: 50px 0;
+            padding: 50px 20px;
         }
 
         h1 {
@@ -34,24 +35,29 @@
 
         /* تنسيق الأزرار الاجتماعية */
         .social-icons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
             margin: 20px 0;
         }
 
         .social-icons a {
-            display: inline-block;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             width: 60px;
             height: 60px;
-            line-height: 60px;
-            margin: 0 10px;
             border-radius: 50%;
             color: white;
             font-size: 24px;
             text-align: center;
-            transition: background-color 0.3s;
+            transition: transform 0.3s;
         }
 
         .social-icons a:hover {
-            opacity: 0.8;
+            transform: scale(1.1);
+            opacity: 0.9;
         }
 
         .fa-linkedin {
@@ -69,18 +75,32 @@
         .fa-instagram {
             background-color: #e1306c; /* البرتقالي */
         }
+
         header {
             display: flex;
+            justify-content: center;
             align-items: center;
             background-color: #333;
             padding: 20px;
         }
+
+        /* تحسين العرض على الهواتف والأجهزة الصغيرة */
+        @media (max-width: 600px) {
+            .social-icons a {
+                width: 50px;
+                height: 50px;
+                font-size: 20px;
+            }
+            h1 {
+                font-size: 1.5em;
+            }
+        }
     </style>
 </head>
 <body>
-   <header>
-        <h1 style="margin-left: 550px; color: white;">Contact</h1>
-   </header>
+    <header>
+        <h1>Contact</h1>
+    </header>
     <section id="Contact">
         <h1>You Can Contact Us Here</h1>
         <div class="social-icons">
