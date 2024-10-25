@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,17 +12,30 @@
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
         }
 
         .container {
             max-width: 1200px;
-            margin: 0 auto;
+            margin: auto;
             padding: 20px;
+            flex: 1;
         }
 
         .packages {
             display: flex;
-            justify-content: space-around;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
             margin-top: 50px;
         }
 
@@ -30,13 +44,21 @@
             border: 1px solid #ccc;
             border-radius: 10px;
             padding: 20px;
-            width: 30%;
+            width: 100%;
+            max-width: 300px;
             text-align: center;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .package:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
         }
 
         .package h2 {
-            margin: 0 0 10px;
+            margin-bottom: 10px;
+            font-size: 1.5em;
         }
 
         .package p {
@@ -46,12 +68,12 @@
 
         .price {
             font-size: 24px;
-            color: green;
+            color: #28a745;
             margin: 20px 0;
         }
 
         .buy-btn {
-            background-color: #007bff;
+            background-color: #6c757d;
             color: white;
             padding: 10px 20px;
             border: none;
@@ -60,61 +82,71 @@
             font-size: 16px;
             text-decoration: none;
             display: inline-block;
+            transition: background-color 0.3s;
         }
 
         .buy-btn:hover {
-            background-color: #0056b3;
+            background-color: #5a6268;
         }
-        header {
-            display: flex;
-            align-items: center;
-            background-color: #333;
-            padding: 20px;
+
+        @media (max-width: 768px) {
+            .packages {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .package {
+                width: 90%;
+            }
+
+            header h1 {
+                font-size: 1.8em;
+            }
         }
     </style>
 </head>
 <body>
     <header>
-  <h1 style="margin-left: 500px; color: white;">Make Websites</h1>
+        <h1>Make Websites</h1>
     </header>
-<div class="container">
-    <div class="packages">
-        <div class="package">
-            <h2>Portfolio</h2>
-            <p>Make Portfolio Website For You</p>
-            <ul>
-                <li>On Telegram</li>
-                <li>With The Design You Want</li>
-                <li>Work Speed</li>
-            </ul>
-            <div class="price">$10-30$</div>
-            <a href="https://t.me/cyber_fun10" target="_blank" class="buy-btn">Buy</a>
-        </div>
-        <div class="package">
-            <h2>Company Sites</h2>
-            <p>make website for a company</p>
-            <ul>
-                <li>On Telegram</li>
-                <li>With The Design You Want</li>
-                <il>Best SEO for site</il>
-                <li>Data Security</li>
-            </ul>
-            <div class="price">$50-1500$</div>
-            <a href="https://t.me/cyber_fun10" target="_blank" class="buy-btn">Buy</a>
-        </div>
-        <div class="package">
-            <h2>Online Store</h2>
-            <p>Make Online Store For freelancers and Dropshiping</p>
-            <ul>
-                <li>SEO</li>
-                <li>Everything is according to your request</li>
-                <li>On Telegram</li>
-            </ul>
-            <div class="price">$50-1000$</div>
-            <a href="https://t.me/cyber_fun10" target="_blank" class="buy-btn">Buy</a>
+    
+    <div class="container">
+        <div class="packages">
+            <div class="package">
+                <h2>Portfolio</h2>
+                <p>Make Portfolio Website For You</p>
+                <ul>
+                    <li>On Telegram</li>
+                    <li>With The Design You Want</li>
+                    <li>Work Speed</li>
+                </ul>
+                <div class="price">$10-30</div>
+                <a href="https://t.me/cyber_fun10" target="_blank" class="buy-btn">Buy</a>
+            </div>
+            <div class="package">
+                <h2>Company Sites</h2>
+                <p>Make website for a company</p>
+                <ul>
+                    <li>On Telegram</li>
+                    <li>With The Design You Want</li>
+                    <li>Best SEO for site</li>
+                    <li>Data Security</li>
+                </ul>
+                <div class="price">$50-1500</div>
+                <a href="https://t.me/cyber_fun10" target="_blank" class="buy-btn">Buy</a>
+            </div>
+            <div class="package">
+                <h2>Online Store</h2>
+                <p>Make Online Store For freelancers and Dropshipping</p>
+                <ul>
+                    <li>SEO</li>
+<li>Everything is according to your request</li>
+                    <li>On Telegram</li>
+                </ul>
+                <div class="price">$50-1000</div>
+                <a href="https://t.me/cyber_fun10" target="_blank" class="buy-btn">Buy</a>
+            </div>
         </div>
     </div>
-</div>
-
 </body>
 </html>
